@@ -1,0 +1,33 @@
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+  ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+  -->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernatedb</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">create</property> <!-- If it is create, existing schema will be recreated if the server is started, there by vanishing all the previous data -->
+     <!--    <mapping class="org.learn.hibernate.dto.UserDetails"/> -->
+         <mapping class="org.learn.hibernate.dto.UserDetailsV2"/>
+         <mapping class="org.learn.hibernate.dto.UserDetailsV3"/>
+         <mapping class="org.learn.hibernate.dto.UserDetailsV4"/>
+          <mapping class="org.learn.hibernate.dto.UserDetailsV5"/>
+          <mapping class="org.learn.hibernate.dto.UserDetailsV51"/>
+          <mapping class="org.learn.hibernate.dto.UserDetailsV6"/>
+           <mapping class="org.learn.hibernate.dto.UserDetailsV7"/>
+         <mapping class="org.learn.hibernate.dto.VehicleV1"/>
+           <mapping class="org.learn.hibernate.dto.VehicleV11"/>
+         <mapping class="org.learn.hibernate.dto.VehicleV2"/>
+           <mapping class="org.learn.hibernate.dto.VehicleV3"/>
+    </session-factory>
+</hibernate-configuration>
